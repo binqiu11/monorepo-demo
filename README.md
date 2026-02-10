@@ -94,7 +94,7 @@ monorepo/
 # 1. 安装根目录的开发工具依赖
 # 2. 递归安装所有 workspace 包的依赖
 # 3. 建立包之间的符号链接
-pnpm init
+pnpm run init
 
 # 1. 构建 rmax
 # 2. 启动 rmax 的文件监听
