@@ -1,5 +1,5 @@
 {
-  "name": "@packages/rmax",
+  "name": "@unifid-protal/rmax",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -7,14 +7,14 @@
   "types": "./dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "dev": "vite --mode",
-    "build:dev": "run-p type-check && run-p \"build-only {@}\" -- dev",
-    "build:stage": "run-p type-check && run-p \"build-only {@}\" -- stage",
-    "build:prod": "run-p type-check && run-p \"build-only {@}\" -- prod",
+    "dev": "vite build --watch --mode development",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "build:stage": "vite build --mode stage",
+    "build:prod": "vite build --mode production",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test": "vitest",
-    "build-only": "vite build --mode",
     "type-check": "vue-tsc",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
@@ -31,7 +31,7 @@
   ],
   "dependencies": {
     "@intlify/unplugin-vue-i18n": "^4.0.0",
-    "@packages/shared": "workspace:*",
+    "@unifid-protal/shared": "workspace:*",
     "@vueuse/components": "^12.2.0",
     "@vueuse/core": "^12.2.0",
     "pinia": "^2.1.7",

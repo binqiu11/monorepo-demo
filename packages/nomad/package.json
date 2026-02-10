@@ -1,15 +1,15 @@
 {
-  "name": "@packages/a1",
+  "name": "@unifid-protal/nomad",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": {
-    "dev": "vite --mode dev",
-    "build": "vite build",
-    "preview": "vite preview"
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./pages/*": "./src/pages/*"
   },
   "dependencies": {
-    "@packages/rmax": "workspace:*",
+    "@unifid-protal/shared": "workspace:*",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "vue": "^3.4.21",
