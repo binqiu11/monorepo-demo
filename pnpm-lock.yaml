@@ -10,7 +10,7 @@ importers:
 
   packages/nomad:
     dependencies:
-      '@unifid-protal/shared':
+      '@unifid-portal/shared':
         specifier: workspace:*
         version: link:../shared
       pinia:
@@ -98,7 +98,7 @@ importers:
       '@intlify/unplugin-vue-i18n':
         specifier: ^4.0.0
         version: 4.0.0(rollup@4.57.1)
-      '@unifid-protal/shared':
+      '@unifid-portal/shared':
         specifier: workspace:*
         version: link:../shared
       '@vueuse/components':
@@ -216,21 +216,36 @@ importers:
 
   packages/shell:
     dependencies:
-      '@unifid-protal/nomad':
+      '@intlify/unplugin-vue-i18n':
+        specifier: ^4.0.0
+        version: 4.0.0(rollup@4.57.1)
+      '@unifid-portal/nomad':
         specifier: workspace:*
         version: link:../nomad
-      '@unifid-protal/rmax':
+      '@unifid-portal/rmax':
         specifier: workspace:*
         version: link:../rmax
-      '@unifid-protal/shared':
+      '@unifid-portal/shared':
         specifier: workspace:*
         version: link:../shared
+      '@vueuse/components':
+        specifier: ^12.2.0
+        version: 12.8.2(typescript@5.8.2)
+      '@vueuse/core':
+        specifier: ^12.2.0
+        version: 12.8.2(typescript@5.8.2)
       pinia:
         specifier: ^2.1.7
         version: 2.3.1(typescript@5.8.2)(vue@3.5.27(typescript@5.8.2))
       pinia-plugin-persistedstate:
         specifier: ^3.2.1
         version: 3.2.3(pinia@2.3.1(typescript@5.8.2)(vue@3.5.27(typescript@5.8.2)))
+      react:
+        specifier: 17.0.2
+        version: 17.0.2
+      react-dom:
+        specifier: 17.0.2
+        version: 17.0.2(react@17.0.2)
       vue:
         specifier: ^3.4.21
         version: 3.5.27(typescript@5.8.2)
@@ -4183,6 +4198,14 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
+  '@vueuse/components@12.8.2(typescript@5.8.2)':
+    dependencies:
+      '@vueuse/core': 12.8.2(typescript@5.8.2)
+      '@vueuse/shared': 12.8.2(typescript@5.8.2)
+      vue: 3.5.27(typescript@5.8.2)
+    transitivePeerDependencies:
+      - typescript
+
   '@vueuse/core@12.8.2(typescript@5.4.5)':
     dependencies:
       '@types/web-bluetooth': 0.0.21
@@ -4192,11 +4215,26 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
+  '@vueuse/core@12.8.2(typescript@5.8.2)':
+    dependencies:
+      '@types/web-bluetooth': 0.0.21
+      '@vueuse/metadata': 12.8.2
+      '@vueuse/shared': 12.8.2(typescript@5.8.2)
+      vue: 3.5.27(typescript@5.8.2)
+    transitivePeerDependencies:
+      - typescript
+
   '@vueuse/metadata@12.8.2': {}
 
   '@vueuse/shared@12.8.2(typescript@5.4.5)':
     dependencies:
       vue: 3.5.27(typescript@5.4.5)
+    transitivePeerDependencies:
+      - typescript
+
+  '@vueuse/shared@12.8.2(typescript@5.8.2)':
+    dependencies:
+      vue: 3.5.27(typescript@5.8.2)
     transitivePeerDependencies:
       - typescript
 

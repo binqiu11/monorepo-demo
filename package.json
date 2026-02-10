@@ -5,12 +5,12 @@
 	"main": "index.js",
 	"scripts": {
 		"init": "pnpm install",
-		"dev": "pnpm --filter @unifid-protal/rmax build:dev && pnpm --parallel --filter @unifid-protal/rmax --filter @unifid-protal/shell dev",
+		"dev": "pnpm --filter @unifid-portal/rmax build:dev && pnpm --parallel --filter @unifid-portal/rmax --filter @unifid-portal/shell dev",
 		"build": "pnpm run build:prod",
-		"build:dev": "pnpm --filter @unifid-protal/rmax build:dev && pnpm --filter @unifid-protal/shell build:dev",
-		"build:stage": "pnpm --filter @unifid-protal/rmax build:stage && pnpm --filter @unifid-protal/shell build:stage",
-		"build:prod": "pnpm --filter @unifid-protal/rmax build:prod && pnpm --filter @unifid-protal/shell build:prod",
-		"test:shell": "pnpm --filter @unifid-protal/rmax build && pnpm --filter @unifid-protal/shell test"
+		"build:dev": "pnpm --filter @unifid-portal/rmax build:dev && pnpm --filter @unifid-portal/shell build:dev",
+		"build:stage": "pnpm --filter @unifid-portal/rmax build:stage && pnpm --filter @unifid-portal/shell build:stage",
+		"build:prod": "pnpm --filter @unifid-portal/rmax build:prod && pnpm --filter @unifid-portal/shell build:prod",
+		"test:shell": "pnpm --filter @unifid-portal/rmax build && pnpm --filter @unifid-portal/shell test"
 	},
 	"keywords": [],
 	"author": "",

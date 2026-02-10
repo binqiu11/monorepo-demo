@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import { NomadHomePage, NomadReportPage } from '@unifid-protal/nomad';
-import { TestComponent1, TestComponent2, TestComponent3, TestComponent4 } from '@unifid-protal/rmax';
+import { NomadHomePage, NomadReportPage } from '@unifid-portal/nomad';
+import { TestComponent1, TestComponent2, TestComponent3, TestComponent4 } from '@unifid-portal/rmax';
 
 import AppLayout from '../layouts/AppLayout.vue';
 import LoginPage from '../views/LoginPage.vue';

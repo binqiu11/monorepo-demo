@@ -8,7 +8,7 @@
 
 <script setup lang="js">
 import { ref } from 'vue';
-import { Button } from '@unifid-protal/shared/components';
+import { Button } from '@unifid-portal/shared/components';
 
 const count = ref(0);
 
