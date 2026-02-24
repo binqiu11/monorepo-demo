@@ -1,8 +1,8 @@
-import ReactDom from 'react-dom';
+import ReactDom from "react-dom";
 
-export type InnerReactComponentProps = {
+export interface InnerReactComponentProps {
   title?: string;
-};
+}
 
 function InnerReactComponent({ title }: InnerReactComponentProps) {
   return (

@@ -1,13 +1,12 @@
 <template>
-	<button @click="emit('click')">
-		<slot></slot>
-	</button>
+  <button
+    class="body-s"
+    @click="emit('click')"
+  >
+    <slot />
+  </button>
 </template>
 
 <script setup lang="js">
-import { ref } from "vue";
-
-const emit = defineEmits(['click'])
-
-const hovered = ref(false);
+const emit = defineEmits(["click"]);
 </script>

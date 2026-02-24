@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
-const text = ref<string>('RMax Component Test 3');
+const text = ref<string>("RMax Component Test 3");
 </script>
