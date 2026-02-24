@@ -1,14 +1,14 @@
 {
   "name": "@unifid-portal/shared",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
-  "main": "./index.js",
-  "peerDependencies": {
-    "vue": "^3.4.0"
-  },
   "exports": {
     ".": "./index.js",
     "./components": "./components/index.js"
+  },
+  "main": "./index.js",
+  "peerDependencies": {
+    "vue": "catalog:"
   }
 }

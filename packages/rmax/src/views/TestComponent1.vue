@@ -1,18 +1,22 @@
 <template>
-  <div :style="{ border: '1px solid gray', padding: '8px' }">
+  <div class="border border-blue-500 p-2 heading-xl">
     <p>{{ text }}</p>
     <p>Count from pinia : {{ testStore.count }}</p>
-    <Button @click="testStore.addCount">Add</Button>
-    <Button @click="testStore.increaseCount">Increase</Button>
+    <Button @click="testStore.addCount">
+      Add
+    </Button>
+    <Button @click="testStore.increaseCount">
+      Increase
+    </Button>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { Button } from '@unifid-portal/shared/components';
-import { useTestStore } from '@/stores/test';
+import { Button } from "@unifid-portal/shared/components";
+import { ref } from "vue";
+import { useTestStore } from "@/stores/test";
 
 const testStore = useTestStore();
 
-const text = ref<string>('RMax Component Test 1');
+const text = ref<string>("RMax Component Test 1");
 </script>

@@ -3,13 +3,27 @@
     <header class="shell-header">
       <strong>Monorepo Shell</strong>
       <nav class="shell-nav">
-        <RouterLink to="/nomad">Nomad</RouterLink>
-        <RouterLink to="/nomad/report">Nomad Report</RouterLink>
-        <RouterLink to="/rmax/test-1">RMax 1</RouterLink>
-        <RouterLink to="/rmax/test-2">RMax 2</RouterLink>
-        <RouterLink to="/rmax/test-3">RMax 3</RouterLink>
-        <RouterLink to="/rmax/test-4">RMax 4</RouterLink>
-        <RouterLink to="/login">Login</RouterLink>
+        <RouterLink to="/nomad">
+          Nomad
+        </RouterLink>
+        <RouterLink to="/nomad/report">
+          Nomad Report
+        </RouterLink>
+        <RouterLink to="/rmax/test-1">
+          RMax 1
+        </RouterLink>
+        <RouterLink to="/rmax/test-2">
+          RMax 2
+        </RouterLink>
+        <RouterLink to="/rmax/test-3">
+          RMax 3
+        </RouterLink>
+        <RouterLink to="/rmax/test-4">
+          RMax 4
+        </RouterLink>
+        <RouterLink to="/login">
+          Login
+        </RouterLink>
       </nav>
     </header>
     <main class="shell-main">
@@ -19,7 +33,7 @@
 </template>
 
 <script setup lang="js">
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <style scoped>

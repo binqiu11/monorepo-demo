@@ -1,6 +1,6 @@
-import { defineStore } from 'pinia';
+import { defineStore } from "pinia";
 
-export const useTestStore = defineStore('rmax:testStore', {
+export const useTestStore = defineStore("rmax:testStore", {
   state() {
     return {
       count: 1,

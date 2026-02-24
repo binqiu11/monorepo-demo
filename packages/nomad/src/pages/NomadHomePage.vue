@@ -2,13 +2,15 @@
   <section class="nomad-card">
     <h2>Nomad Home</h2>
     <p>Nomad package exports this page component directly.</p>
-    <Button @click="increment">Shared Button ({{ count }})</Button>
+    <Button @click="increment">
+      Shared Button ({{ count }})
+    </Button>
   </section>
 </template>
 
 <script setup lang="js">
-import { ref } from 'vue';
-import { Button } from '@unifid-portal/shared/components';
+import { Button } from "@unifid-portal/shared/components";
+import { ref } from "vue";
 
 const count = ref(0);
 

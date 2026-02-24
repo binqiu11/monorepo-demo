@@ -1,19 +1,38 @@
 {
-	"name": "monorepo-demo",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"init": "pnpm install",
-		"dev": "pnpm --filter @unifid-portal/rmax build:dev && pnpm --parallel --filter @unifid-portal/rmax --filter @unifid-portal/shell dev",
-		"build": "pnpm run build:prod",
-		"build:dev": "pnpm --filter @unifid-portal/rmax build:dev && pnpm --filter @unifid-portal/shell build:dev",
-		"build:stage": "pnpm --filter @unifid-portal/rmax build:stage && pnpm --filter @unifid-portal/shell build:stage",
-		"build:prod": "pnpm --filter @unifid-portal/rmax build:prod && pnpm --filter @unifid-portal/shell build:prod",
-		"test:shell": "pnpm --filter @unifid-portal/rmax build && pnpm --filter @unifid-portal/shell test"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"packageManager": "pnpm@10.10.0"
+  "name": "monorepo-demo",
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.29.3",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "init": "pnpm install",
+    "dev": "pnpm --filter @unifid-portal/rmax build:dev && (pnpm --filter @unifid-portal/rmax run dev:watch & vite)",
+    "build": "pnpm --filter @unifid-portal/rmax build:prod && vite build --mode production"
+  },
+  "dependencies": {
+    "@unifid-portal/nomad": "workspace:*",
+    "@unifid-portal/rmax": "workspace:*",
+    "@unifid-portal/shared": "workspace:*",
+    "pinia": "catalog:",
+    "pinia-plugin-persistedstate": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:",
+    "@tailwindcss/postcss": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "eslint": "catalog:",
+    "postcss": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  }
 }

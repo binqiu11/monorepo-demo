@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+/* 共享 Tailwind：壳应用 + 所有 packages 的源码由根构建时统一扫描 */
+@source "./src/**/*.{vue,js,ts,jsx,tsx}";
+@source "./packages/rmax/src/**/*.{vue,js,ts,jsx,tsx}";
+@source "./packages/nomad/src/**/*.{vue,js}";
+@source "./packages/shared/**/*.{vue,js}";
+
+@theme {
+  /* Z-Index Layer */
+  --z-index-loading-content: 105;
+  --z-index-loading-overlay: 100;
+  --z-index-copy: 80;
+  --z-index-tooltip: 70;
+  --z-index-toast: 65;
+  --z-index-select: 60;
+  --z-index-dialog-content: 35;
+  --z-index-dialog-overlay: 30;
+
+  /* Colors - Primary */
+  --color-primary-50: #f6f9ff;
+  --color-primary-100: #eef3fe;
+  --color-primary-200: #e5ebfa;
+  --color-primary-300: #869ccc;
+  --color-primary-400: #335195;
+  --color-primary-500: #294177;
+  --color-primary-600: #202b54;
+  --color-primary-800: #0a101e;
+
+  /* Colors - Gray */
+  --color-gray-25: #fafbfd;
+  --color-gray-50: #f7f8fb;
+  --color-gray-100: #f3f4f8;
+  --color-gray-150: #e5e9f1;
+  --color-gray-200: #dbe0ea;
+  --color-gray-300: #9ba3b4;
+  --color-gray-500: #707785;
+  --color-gray-600: #4d5162;
+  --color-gray-800: #1d1e23;
+
+  /* Colors - Warning */
+  --color-warning-50: #fff8ec;
+  --color-warning-100: #fff2db;
+  --color-warning-200: #ffeac3;
+  --color-warning-400: #ffad20;
+  --color-warning-600: #855a11;
+  --color-warning-800: #473009;
+
+  /* Colors - Error */
+  --color-error-50: #fff4f5;
+  --color-error-100: #fee3e4;
+  --color-error-200: #fdcbcd;
+  --color-error-300: #fe6b70;
+  --color-error-400: #f85359;
+  --color-error-500: #e51d24;
+  --color-error-600: #9f151a;
+  --color-error-800: #461719;
+
+  /* Colors - Success */
+  --color-success-50: #edfbf8;
+  --color-success-100: #dff6f1;
+  --color-success-200: #c6ede5;
+  --color-success-400: #37c9aa;
+  --color-success-600: #1d6958;
+  --color-success-800: #0f3830;
+
+  --color-black: #000;
+  --color-white: #fff;
+
+  /* Colors - On */
+  --color-on-0: var(--color-white);
+  --color-on-100: var(--color-gray-300);
+  --color-on-200: var(--color-gray-500);
+  --color-on-300: var(--color-gray-600);
+  --color-on-400: var(--color-gray-800);
+
+  /* Colors - Surface */
+  --color-surface-0: var(--color-white);
+  --color-surface-100: var(--color-gray-25);
+  --color-surface-200: var(--color-gray-50);
+  --color-surface-300: var(--color-gray-100);
+  --color-surface-400: var(--color-gray-150);
+  --color-surface-500: var(--color-gray-200);
+
+  /* Colors - Brand */
+  --color-brand-100: var(--color-primary-50);
+  --color-brand-200: var(--color-primary-100);
+  --color-brand-300: var(--color-primary-200);
+  --color-brand-400: var(--color-primary-300);
+  --color-brand-500: var(--color-primary-400);
+  --color-brand-600: var(--color-primary-500);
+  --color-brand-700: var(--color-primary-600);
+  --color-brand-800: var(--color-primary-800);
+
+  /* Colors - Status */
+  --color-status-error-on: var(--color-error-800);
+  --color-status-error-subtle: var(--color-error-50);
+  --color-status-error-solid: var(--color-error-400);
+  --color-status-warning-on: var(--color-warning-800);
+  --color-status-warning-subtle: var(--color-warning-50);
+  --color-status-warning-solid: var(--color-warning-400);
+  --color-status-success-on: var(--color-success-800);
+  --color-status-success-subtle: var(--color-success-50);
+  --color-status-success-solid: var(--color-success-400);
+  --color-status-info-on: var(--color-gray-800);
+  --color-status-info-subtle: var(--color-gray-50);
+  --color-status-info-solid: var(--color-gray-500);
+
+  /* Spacing */
+  --spacing: 4px;
+  --spacing-3xs: 2px;
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-s: 12px;
+  --spacing-m: 16px;
+  --spacing-l: 20px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 40px;
+  --spacing-4xl: 48px;
+  --spacing-5xl: 56px;
+  --spacing-6xl: 64px;
+
+  /* Font Weight */
+  --font-weight-semibold: 600;
+
+  /* Radius */
+  /* @NOTE: To avoid the pxtorem conversion error caused by infinite values. */
+  --radius-full: 9999px;
+  --radius: 4px;
+  --radius-3xs: 2px;
+  --radius-2xs: 4px;
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-m: 16px;
+
+  /* Shadow */
+  --shadow-gray-xl: 0 4px 75px 0 rgba(68, 80, 125, 0.16);
+  --shadow-gray-s: 0 4px 16px 0 rgba(68, 80, 125, 0.16);
+  --shadow-blue-s: 0 4px 8px 0 rgba(51, 81, 149, 0.3);
+  --shadow-yellow-s: 0 4px 8px 0 rgba(255, 173, 32, 0.3);
+  --shadow-red-s: 0 4px 8px 0 rgba(248, 83, 89, 0.3);
+  --shadow-green-s: 0 4px 8px 0 rgba(55, 201, 170, 0.3);
+
+  /* Transition & Animation */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes pulse {
+    50% {
+      opacity: 0.5;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes zoom-in {
+    from {
+      opacity: 0;
+      transform: translateY(5%) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%) scale(1);
+    }
+  }
+
+  @keyframes blur-text {
+    0% {
+      filter: blur(0px);
+      transform: scale(1);
+    }
+
+    100% {
+      filter: blur(2px);
+      transform: scale(0.9);
+    }
+  }
+
+  --animate-spin: spin 1s linear infinite;
+  --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-fadeIn: fade-in 0.2s ease-in-out;
+  --animate-zoomIn: zoom-in 0.2s ease-in-out;
+  --animate-blurText: blur-text 1.5s infinite linear alternate;
+}
+
+/* Typography */
+@utility heading-xl {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+@utility heading-l {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+@utility heading-m {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+@utility heading-s {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+}
+@utility heading-xs {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+@utility body-m {
+  font-size: 16px;
+  line-height: 24px;
+}
+@utility body-s {
+  font-size: 14px;
+  line-height: 24px;
+}
+@utility body-xs {
+  font-size: 12px;
+  line-height: 16px;
+}
+@utility icon-s {
+  height: 14px;
+  width: 14px;
+}
+@utility icon-m {
+  height: 16px;
+  width: 16px;
+}
+@utility icon-l {
+  height: 24px;
+  width: 24px;
+}

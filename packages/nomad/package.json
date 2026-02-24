@@ -1,16 +1,16 @@
 {
   "name": "@unifid-portal/nomad",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
-  "main": "./src/index.js",
   "exports": {
     ".": "./src/index.js",
     "./pages/*": "./src/pages/*"
   },
+  "main": "./src/index.js",
   "peerDependencies": {
     "@unifid-portal/shared": "workspace:*",
-    "vue": "^3.4.21"
+    "vue": "catalog:"
   },
   "devDependencies": {}
 }

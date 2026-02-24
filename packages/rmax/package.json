@@ -1,70 +1,45 @@
 {
   "name": "@unifid-portal/rmax",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
-  "module": "./dist/index.es.js",
-  "types": "./dist/index.d.ts",
   "sideEffects": false,
-  "scripts": {
-    "dev": "vite build --watch --mode development",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
-    "build:stage": "vite build --mode stage",
-    "build:prod": "vite build --mode production",
-    "preview": "vite preview",
-    "test:unit": "vitest",
-    "test": "vitest",
-    "type-check": "vue-tsc",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
-  },
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js"
     },
     "./*": "./dist/*.js"
   },
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "dependencies": {},
+  "scripts": {
+    "dev:watch": "vite build --watch --mode development",
+    "build:dev": "vite build --mode development",
+    "build:stage": "vite build --mode stage",
+    "build:prod": "vite build --mode production",
+    "type-check": "vue-tsc"
+  },
   "peerDependencies": {
     "@unifid-portal/shared": "workspace:*",
-    "pinia": "^2.1.7",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "pinia": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.11",
-    "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.12.5",
-    "@types/react": "17.0.2",
-    "@types/react-dom": "17.0.2",
-    "@vitejs/plugin-react-swc": "^3.11.0",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "@vitejs/plugin-vue-jsx": "^3.1.0",
-    "@vue/eslint-config-prettier": "^9.0.0",
-    "@vue/eslint-config-typescript": "^13.0.0",
-    "@vue/tsconfig": "^0.5.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.23.0",
-    "jsdom": "^24.0.0",
-    "npm-run-all2": "^6.1.2",
-    "postcss": "^8.5.6",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.6.14",
-    "tailwindcss": "^4.1.11",
-    "typescript": "~5.4.5",
-    "unplugin-vue-components": "^0.27.2",
-    "vite": "^5.2.8",
-    "vite-plugin-dts": "^4.5.4",
-    "vite-plugin-vue-devtools": "^7.0.25",
-    "vite-svg-loader": "^5.1.0",
-    "vitest": "^1.4.0",
-    "vue-tsc": "^2.0.11"
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react-swc": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vue/tsconfig": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vue-tsc": "catalog:"
   }
 }

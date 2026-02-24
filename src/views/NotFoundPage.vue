@@ -2,12 +2,14 @@
   <section class="not-found">
     <h1>404</h1>
     <p>Page not found.</p>
-    <RouterLink to="/nomad">Back to app</RouterLink>
+    <RouterLink to="/nomad">
+      Back to app
+    </RouterLink>
   </section>
 </template>
 
 <script setup lang="js">
-import { RouterLink } from 'vue-router';
+import { RouterLink } from "vue-router";
 </script>
 
 <style scoped>

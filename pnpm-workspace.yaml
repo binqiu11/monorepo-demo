@@ -1,2 +1,37 @@
+# 新加依赖（含开发依赖）必须写入 catalog，package.json 只能写 catalog:
+catalogMode: strict
+# 在 pnpm install 时自动移除已无任何包引用的 catalog 条目（配合 pnpm remove 使用）
+cleanupUnusedCatalogs: true
+shellEmulator: true
+
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  - vite
+  - undici-types
+
 packages:
-  - 'packages/*'
+  - "packages/*"
+
+# 所有依赖版本在此统一维护（含生产与开发），各 package.json 使用 catalog: 引用
+catalog:
+  "@antfu/eslint-config": ^7.4.3
+  "@tailwindcss/postcss": ^4.1.18
+  "@types/node": ^20.12.5
+  "@types/react": 17.0.2
+  "@types/react-dom": 17.0.2
+  "@vitejs/plugin-react-swc": ^3.11.0
+  "@vitejs/plugin-vue": ^5.0.4
+  "@vue/tsconfig": ^0.5.1
+  eslint: ^9.39.2
+  pinia: ^2.1.7
+  pinia-plugin-persistedstate: ^3.2.1
+  postcss: ^8.5.6
+  react: 17.0.2
+  react-dom: 17.0.2
+  tailwindcss: ^4.1.18
+  typescript: ~5.4.5
+  vite: ^5.2.8
+  vitest: ^1.4.0
+  vue: ^3.4.21
+  vue-router: ^4.3.0
+  vue-tsc: ^2.0.11
